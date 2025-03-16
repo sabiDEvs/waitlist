@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+p, div, input{
+    font-family: "Poppins", sans-serif;
+}
+h1,h2, h3, h4, h5, a{
+    font-family: "Michroma", sans-serif;
+}
+header{
+    top: 0;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 5px 2px;
+    z-index: 4;
+}
+
+
+.bars{
+    height: 2px;
+    width: 5vw;
+    background-color: #14213d;
+    border: none;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+/*navBar styling*/
+.nav{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    top: 6vh;
+    right: 0;
+    gap: 3vw;
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+}
+.nav a{
+    text-decoration: none;
+    color: #000000;
+}
+/*search input styling*/
+#searchBox{
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+}
+#searchInput{
+    background-color: #e5e5e586;
+    border: none;
+    border-radius: 1.5vw;
+    height: 4vw;
+}
+#searchBox img{
+    height: 4vw;
+    width: 4vw;
+    position: relative;
+    left: -5vw;
+}
+/*icon styling*/
+#iconDiv img{
+    height: 10vw;
+    width: 10vw;
+}
+#iconDiv{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+}
+#iconDiv h1{
+    font-size: 12px;
+    position: relative;
+    left: -2.5vw;
+    margin-bottom: 0;
+}
+footer{
+    background: #000000;
+    color: #ffffff;
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 3vw 5vh;
+    gap: 10vh;
+    z-index: 3;
+}
+#footerNav{
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+#subscribe{
+    display: flex;
+    align-items: stretch;
+}
+#subscribe input{
+    border: 1px solid #fca311;
+    background: black;
+}
+#rightFoot{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: center;
+}
+footer img{
+    height: 60vw;
+    width: 80vw;
+}
+footer a{
+    text-decoration: none;
+    color:#e5e5e5;
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+#subButton{
+    background-color: #fca311;
+    box-sizing: content-box;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 20px;
+}
+.soonText{
+    position: relative;
+    font-size: 36px;
+}
+.soonText img{
+    position: absolute;
+    top: -5vw;
+}
+.soonText h1{
+    z-index: 2;
+    position: relative;
+    text-shadow: 7px 7px 5px rgba(0,0,0,0.2);
+    font-family: "Poppins", sans-serif;
+}
+.soonPara{
+    font-size: 24px;
+}
+main{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    padding: 5vw;
+}
+.left input[type="email"]{
+    border-radius: 1.5vw;
+    padding: 1.5vw 3vw;
+    border-color: #14213d;
+}
+.left input[type="submit"]{
+    background-color: #fca311;
+    border: none;
+    border-radius: 1.5vw;
+    padding: 1.5vw 3vw;
+    color: #ffffff;
+    box-shadow: 3px 3px 4px 2px rgba(0,0,0, 0.2);
+}
+.bottom{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media only screen and (min-width:768px){
+    .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .left{
+        width: 40%;
+    } 
+    .right{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .mid{
+        height: 110%;
+    }
+    .menu{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        background-color: none;
+        flex-direction: row;
+        gap: 2vw;
+        position: relative;
+        align-items: unset;
+        width: unset;
+        top: 0;
+        right: 0;
+        margin-bottom: 0;
+    }
+    #searchInput{
+        height: 1.5vw;
+    }
+    #searchBox{
+        display: flex;
+        gap: 0.5vw;
+        justify-content: space-between;
+    }
+    #searchBox img{
+        height: 2vw;
+        width: 2vw;
+        position: unset;
+        margin-right: 2vw;
+    }
+    #iconDiv img{
+        height: 6vw;
+        width: 6vw;
+    }
+    #iconDiv h1{
+        left: -1.5vw;
+        font-size: 24px;
+    }
+    footer{
+        width: 94%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vw 3vw;
+        gap: 0;
+    }
+    #rightFoot{
+        gap: 5px;
+        align-items: unset;
+    }
+    #footerNav{
+        flex-direction: row;
+        gap: 2vw;
+    }
+    footer img{
+        height: 10vw;
+        width: 16vw;
+    }
+}
