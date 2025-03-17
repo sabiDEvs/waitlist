@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 p, div, input{
     font-family: "Poppins", sans-serif;
 }
@@ -19,7 +23,9 @@ header{
     padding: 5px 10px 5px 2px;
     z-index: 4;
 }
-
+.mid .group{
+    height: 110%;
+ }
 
 .bars{
     height: 2px;
@@ -102,7 +108,7 @@ footer{
 #footerNav{
     display: flex;
     flex-direction: column;
-    gap: 4vw;
+    gap: 1vw;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1vw;
@@ -118,7 +124,7 @@ footer{
 #rightFoot{
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 2vh;
     align-items: center;
 }
 footer img{
@@ -144,11 +150,12 @@ footer a{
 }
 .soonText{
     position: relative;
-    font-size: 36px;
+    font-size: 24px;
 }
 .soonText img{
     position: absolute;
     top: -5vw;
+    left: 2vw;
 }
 .soonText h1{
     z-index: 2;
@@ -157,12 +164,28 @@ footer a{
     font-family: "Poppins", sans-serif;
 }
 .soonPara{
-    font-size: 24px;
+    font-size: 16px;
 }
+.group{
+    width: 33%;
+}
+
 main{
-    margin-top: 20vh;
+    margin-top: 17vh;
     margin-bottom: 5vh;
     padding: 5vw;
+}
+.mid{
+    height: 105%;
+}
+.left{
+    width: 100%;
+    text-align: center;
+}
+.flex{
+    width: auto;
+    display: flex;
+    gap: 2vw;
 }
 .left input[type="email"]{
     border-radius: 1.5vw;
@@ -175,36 +198,79 @@ main{
     border-radius: 1.5vw;
     padding: 1.5vw 3vw;
     color: #ffffff;
-    box-shadow: 3px 3px 4px 2px rgba(0,0,0, 0.2);
+    box-shadow: 2px 2px 3px 2px rgba(0,0,0, 0.2);
+    width: 40vw;
 }
 .bottom{
     margin-top: 5vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.top{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#fade{
+    width: 100%;
+}
+.right{
+    width: 100%;
+}
+.right img{
+    width: 31%;
+}
+.left, .right, .top, .bottom{
+    margin-bottom: 5vh;
+}
+input{
+    width: 100%;
+}
+.active{
+    display: flex;
 }
 @media only screen and (min-width:768px){
+    .soonText{
+        font-size: 36px;
+    }
     .top{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+    }
+    .soonPara{
+        font-size: 24px;
+    }
+    .soonText img{
+        left: 1vw;
     }
     .left{
         width: 40%;
+        text-align: left;
+    }
+    .flex{
+        gap: 1vw;
     } 
     .right{
-        width: 50%;
+        width: 60%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
     }
-    .mid{
-        height: 110%;
+    .left input[type="email"]{
+        width: 30vw;
     }
     .menu{
         display: none;
     }
+    
+    .bottom{
+        flex-direction: row;
+        align-items: flex-start;
+     }
     .nav{
         display: flex;
         background-color: none;
