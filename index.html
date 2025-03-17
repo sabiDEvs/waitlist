@@ -8,7 +8,7 @@
         <meta property="og:title" content="elaBorate - Engineering Lab Reports">
         <meta property="og:description" content="Create, manage and analyze engineering laboratory experiments and reports with ease">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.elaborate.edu">
+        <meta property="og:url" content="https://www.elaborate.com.ng">
         <meta property="og:image" content="./asset/footer-logo.png">
         <meta property="og:locale" content="en_GB">
         <meta property="og:image:alt" content="elaBorate engineering laboratory reports platform">
@@ -68,32 +68,71 @@
             </section>
             <section class="bottom">
                 <div class="left flex">
-                    <input type="email" placeholder="Email Address" id="email">
+                    <input type="email" placeholder="Email Address" id="email" required>
                     <input type="submit" value="Join" id="register">
-                </div>
+                     </div>
+                     <p id="error-message" style="color: red; display: none;">Please enter a valid email address.</p>
+               
                 <div class="right">
                     <img src="./asset/fade.png" id="fade">
+                </div>
             </section>
         </main>
-        <footer>
-            <section id="leftFoot">
-                <div><img src="./asset/elaborate-footer-logo.png"></div>
-                <nav id="footerNav">
-                    <div><a href="#"><p>Home</p></a></div>
-                    <div><a href="#"><p>About</p></a></div>
-                    <div><a href="#"><p>Reports</p></a></div>
-                    <div><a href="mailto:info.sabidevs@gmail.com"><p>Contact Us</p></a></div>
-                </nav>
-            </section>
-            <section id="rightFoot">
-                <p>Get our latest innovative news</p>
-                <div id="subscribe">
-                    <input type="email" placeholder="Email Address" id="subEmail">
-                    <div id="subButton">Subscribe</div>
+
+
+
+
+        <!-- @obuhdaniel success modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Success!</h2>
+                    <span class="close">&times;</span>
                 </div>
-                <div>© Copyright <span>2025</span></div>
-                <p>All rights reserved. A <span>sabi</span>Devs initiative</p>
-            </section>
-        </footer>
+                <div class="modal-body">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48">
+                            <circle cx="12" cy="12" r="11" fill="#4CAF50" />
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>Thank you for Registering!</h3>
+                    <p>You'll be the first to know when we launch elaborate.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-close">Got it!</button>
+                </div>
+            </div>
+        </div>
+<footer>
+    <section id="leftFoot">
+        <div class="footer-logo">
+            <img src="./asset/elaborate-footer-logo.png" alt="Company Logo">
+        </div>
+        <nav id="footerNav">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">About</a></div>
+            <div><a href="#">Reports</a></div>
+            <div><a href="mailto:info.sabidevs@gmail.com">Contact Us</a></div>
+        </nav>
+    </section>
+    <section id="rightFoot">
+        <h3>Get our latest innovative news</h3>
+        <div id="subscribe">
+            <input type="email" placeholder="Email Address" id="email" aria-label="Email Address">
+            <button id="register" class="subButton">Subscribe</button>
+        </div>
+        <div class="copyright">
+            <p>© Copyright <span id="year">2025</span> | All rights reserved</p>
+            <p>A <span class="highlight">sabi</span>Devs initiative</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </section>
+</footer>
     </body>
     
