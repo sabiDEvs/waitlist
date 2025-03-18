@@ -30,14 +30,19 @@ document.getElementById('register').addEventListener('click', function() {
             },
             body: JSON.stringify({ email: email }),
         })
-        .then(response => response.json())
-        .then(data => {
+        .then(response => {
+            if (response.headers.get('content-type')?.includes('application/json')) {
+                return response.json();
+            } else {
+               
+            }
+        })
+        .then(() => {
             showModal();
             document.getElementById('email').value = '';
             errorMessage.style.display = 'none';
         })
         .catch((error) => {
-            console.error('Error:', error);
         });
     } else {
         errorMessage.style.display = 'block';
