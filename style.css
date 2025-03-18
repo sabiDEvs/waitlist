@@ -416,7 +416,7 @@ footer a{
 /*@obuhdaniel modal*/
 /* Enhanced Modal Styling */
 .modal {
-    display: block; /* Hidden by default */
+    display: hidden; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
     left: 0;
