@@ -5,10 +5,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-p, div, input{
+p, div, footer{
     font-family: "Poppins", sans-serif;
 }
-h1,h2, h3, h4, h5, a{
+h1,h2, h3, h4, h5{
     font-family: "Michroma", sans-serif;
 }
 header{
@@ -247,7 +247,14 @@ footer a{
     vertical-align: middle;
     padding: 10px 20px;
 }
+.modal-content {
+    width: 95%;
+    margin: 15% auto;
+}
 
+.modal-header h2 {
+    font-size: 20px;
+}
 
 @media only screen and (min-width: 768px) {
     footer{
@@ -492,16 +499,7 @@ footer a{
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        margin: 15% auto;
-    }
-    
-    .modal-header h2 {
-        font-size: 20px;
-    }
-}
+
 
 
 
