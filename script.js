@@ -17,36 +17,58 @@ header.appendChild(div);
 
 
 //@obuhdaniel modal implementation
-document.getElementById('register').addEventListener('click', function() {
-    const email = document.getElementById('email').value;
+document.getElementById('register').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const emailInput = document.getElementById('email');
     const errorMessage = document.getElementById('error-message');
+    const loading = document.getElementById('loading');
+    const form = document.getElementById('form');
+    const registerButton = document.getElementById('register');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (emailRegex.test(email)) {
-        fetch('https://ideate.szone.com.ng/submit-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email: email }),
-        })
-        .then(response => {
-            if (response.headers.get('content-type')?.includes('application/json')) {
-                return response.json();
-            } else {
-               
-            }
-        })
-        .then(() => {
-            showModal();
-            document.getElementById('email').value = '';
-            errorMessage.style.display = 'none';
-        })
-        .catch((error) => {
-        });
-    } else {
+    const email = emailInput.value.trim();
+
+    if (!emailRegex.test(email)) {
         errorMessage.style.display = 'block';
+        return;
+    } else {
+        errorMessage.style.display = 'none'; 
     }
+
+
+    registerButton.style.display = 'none';
+    loading.style.display = 'block'; 
+
+    fetch('https://ideate.szone.com.ng/submit-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email }),
+    })
+    .then(response => {
+        if (response.headers.get('content-type')?.includes('application/json')) {
+            return response.json(); 
+        } else {
+            throw new Error('Invalid response format'); 
+        }
+    })
+    .then(() => {
+
+        showModal(); 
+        emailInput.value = '';
+        errorMessage.style.display = 'none'; 
+    })
+    .catch((error) => {
+        console.error('Error:', error); 
+       
+    })
+    .finally(() => {
+        loading.style.display = 'none';
+        form.style.display = 'none';
+        // registerButton.style.display = 'inline-block';
+    });
 });
 
     const modal = document.getElementById("successModal");
