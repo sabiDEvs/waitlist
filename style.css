@@ -129,7 +129,7 @@ header{
 }
 
 main{
-    margin-top: 17vh;
+    margin-top: 10vh;
     margin-bottom: 5vh;
     padding: 5vw;
 }
@@ -186,6 +186,7 @@ main{
 }
 input{
     width: 100%;
+    padding: 2px 4px;
 }
 .active{
     display: flex;
@@ -204,6 +205,8 @@ footer{
     padding: 2vw 3vw 5vh;
     gap: 10vh;
     z-index: 3;
+    bottom: 0;
+    position: relative;
 }
 #leftFoot{
     display: flex;
@@ -232,7 +235,10 @@ footer{
     gap: 4vh;
     align-items: center;
     text-align: center;
-    font-size: 14px; 
+    font-size: 16px; 
+}
+#rightFoot h3{
+    font-size: 14px;
 }
 footer img{
     height: 60vw;
@@ -256,14 +262,24 @@ footer a{
     padding: 10px 20px;
 }
 .modal-content {
-    width: 95%;
-    margin: 15% auto;
+    background-color: #ffffff;
+    margin: 40% auto; /* Positioned higher on screen */
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    transform: translateY(20px);
+    animation: slideUp 0.4s ease-out forwards;
 }
 
 .modal-header h2 {
     font-size: 20px;
 }
-
+.highlight{
+    color: #fca311;
+    font-weight: bold;
+}
 @media only screen and (min-width: 768px) {
     footer{
         width: 94%;
@@ -294,7 +310,9 @@ footer a{
     .soonText {
         font-size: 36px;
     }
-
+    .modal-content{
+        margin: 10% auto;
+    }
     .top {
         display: flex;
         flex-direction: row;
@@ -385,7 +403,7 @@ footer a{
     }
 
     #leftFoot {
-        width: 30%;
+        /*width: 30%;*/
     }
 
     #rightFoot {
@@ -402,7 +420,7 @@ footer a{
 /*@obuhdaniel modal*/
 /* Enhanced Modal Styling */
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
     left: 0;
@@ -419,17 +437,7 @@ footer a{
     to { opacity: 1; }
 }
 
-.modal-content {
-    background-color: #ffffff;
-    margin: 10% auto; /* Positioned higher on screen */
-    padding: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 450px;
-    transform: translateY(20px);
-    animation: slideUp 0.4s ease-out forwards;
-}
+
 
 @keyframes slideUp {
     from { transform: translateY(40px); opacity: 0; }
@@ -465,6 +473,7 @@ footer a{
     margin: 0 0 12px 0;
     color: #333;
     font-size: 18px;
+    font-family: Poppins, sans-serif;
 }
 
 .modal-body p {
@@ -494,7 +503,7 @@ footer a{
 }
 
 .btn-close {
-    background-color: #4CAF50;
+    background-color: #008000;
     color: white;
     border: none;
     padding: 10px 24px;
@@ -505,7 +514,7 @@ footer a{
 }
 
 .btn-close:hover {
-    background-color: #45a049;
+    background-color: #008000;
 }
 
 /* Mobile Responsiveness */
