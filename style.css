@@ -105,8 +105,10 @@ header{
 }
 .soonText img{
     position: absolute;
-    top: -5vw;
-    left: 2vw;
+    top: -10vw;
+    height: auto;
+    width: 20%;
+    left: 20%;
 }
 .soonText h1{
     z-index: 2;
@@ -320,6 +322,9 @@ footer a{
 
     .soonText img {
         left: 1vw;
+        height: auto;
+        width: auto;
+        top: -5vw;
     }
 
     .left {
@@ -394,9 +399,10 @@ footer a{
 }
 
 @media only screen and (min-width: 1024px) {
-    footer {
+    /*footer {
         padding: 4rem 5rem;
     }
+        */
 
     #leftFoot {
         /*width: 30%;*/
@@ -416,7 +422,7 @@ footer a{
 /*@obuhdaniel modal*/
 /* Enhanced Modal Styling */
 .modal {
-    display: hidden; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
     left: 0;

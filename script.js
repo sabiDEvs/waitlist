@@ -17,8 +17,13 @@ header.appendChild(div);
 
 
 //@obuhdaniel modal implementation
+
+
+document
+
+
 document.getElementById('register').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
     const emailInput = document.getElementById('email');
     const errorMessage = document.getElementById('error-message');
@@ -102,6 +107,30 @@ document.getElementById('register').addEventListener('click', function(event) {
     }
     function showModal() {
         modal.style.display = "block";
+    }
+
+    function subscribe(email){
+        fetch('https://ideate.szone.com.ng/submit-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email }),
+        })
+        .then(response => {
+            if (response.headers.get('content-type')?.includes('application/json')) {
+                return response.json(); 
+            } else {
+                throw new Error('Invalid response format'); 
+            }
+        })
+        .then(() => {
+    
+           })
+        .catch((error) => {
+        })
+        .finally(() => {
+        });
     }
     
 });
